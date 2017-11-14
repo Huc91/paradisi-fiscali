@@ -1,0 +1,564 @@
+	<!DOCTYPE html>
+<html lang="It">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="Shortcut Icon" href="img/favicon.gif">
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="keywords" content="" />
+		<meta name="author"	content="" />
+		<title>Rai Data Journalism - Dai Panama Papers ai Malta Files: i buchi neri della ricchezza</title>
+
+		<!--Meta social -->
+		<meta property="og:title" content="Dai Panama Papers ai Malta Files: i buchi neri della ricchezza"/>
+		<meta property="og:type"content="website" />
+		<meta property="og:url" content="http://www.rainews.it/ran24/speciali/2017/paradisi-fiscali-evasione-tasse"/>
+		<meta property="og:image" content="http://www.rainews.it/ran24/speciali/2017/paradisi-fiscali-evasione-tasse/shareimage.jpg"/>
+		<meta property="og:image:width" content="600"/>
+		<meta property="og:image:height" content="314"/>
+
+		<meta property="og:url" content="http://www.rainews.it/ran24/speciali/2017/paradisi-fiscali-evasione-tasse"/>
+		<meta property="og:description" content="Miliardi di miliardi mancano all'appello, le casse degli Stati si svuotano. L'evasione brucia risorse e servizi.
+        Dove sono nascosti questi soldi?" />
+		<meta name="keywords" content="paradisi fiscali, evasione, elusione, tasse, Ocse, Fondo Monetario internazionale, blacklist, Unctad, Investimenti diretti esteri, Foreign direct investment, Gabriel Zucman, Oxfam, Tax Justice Network, Multinazionali"/>
+		<meta name="author" content="Rai"/>
+
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
+		<link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+
+		<link rel="stylesheet" type="text/css" href="css/c3.css"/>
+		<!--Ripple effect -->
+		<link rel="stylesheet" href="css/ripple.min.css">
+		<!--Bootstrap -->
+		<link rel="stylesheet" href="js/bootstrap.min.css">
+		<!-- Social Share Kit CSS -->
+		<link rel="stylesheet" href="css/social-share-kit.css" type="text/css">
+		<!-- Social Share Kit JS -->
+		<script type="text/javascript" src="js/social-share-kit.min.js"></script>
+
+
+		<!--stylesheets -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/blackhole.css">
+
+		<!--d3 -->
+		<script src="js/d3.js"></script>
+		<!-- ScrollMagic -->
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/ScrollMagic.js"></script>
+		<script src="js/debug.addIndicators.js"></script>
+		<script src="js/animation.gsap.js"></script>
+
+	</head>
+	<body>
+
+		<!-- Fixed navbar -->
+		<div class="container-fluid header" id="logo-rai">
+			<button type="button" class="menu nav-toggle ripple"><span class="icon up"></span><span class="icon md"></span><span class="icon dw"></span>Toggle nav</button>
+
+				<nav id="menu">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li class="lvl1">
+							<a href="index.html#f-i" class="cat">Ep.1 - Chi è rimasto in paradiso</a>
+						</li>
+						<li class="lvl1">
+							<a href="2.html" class="cat">Ep.2 - Quanti soldi sono nascosti</a>
+						</li>
+						<li class="lvl1">
+							<a href="3.html" class="cat">Ep.3 - La centrifuga degli investimenti</a>
+						</li>
+						<li class="lvl1">
+							<a href="4.html" class="cat">Ep.4 - Fisco inferno</a>
+						</li>
+
+					</ul>
+					<div class="bkgMenu"></div>
+				</nav>
+				<div class="cap" id="cap-top">
+					Ep.2</br>
+					Quanti soldi sono nascosti
+				</div>
+			<div id="logo-rai">
+		  <a href="http://www.rainews.it/">
+		    <img src="img/rai-logo.png"></img>
+		  </a>
+			</div>
+		</div>
+
+	<div id="down-arrow-container">
+		<span id="down-arrow">
+			&#8595
+		</span>
+	</div>
+
+	<!-- D3 graph -->
+	<!-- graf-blackhole-->
+	<div id="graf-roll-container">
+	<div id="graf-blackhole-container">
+		<div id="graf-blackhole">
+		</div>
+	</div>
+
+	<div id="text-roll">
+		<p>
+			I paradisi fiscali sono come i buchi neri
+			nello spazio.
+		</p>
+			<p id="magnet">
+			I soldi entrano e non abbiamo nessuna
+			idea di che fine facciano.
+		<div id="explosion">
+		</div>
+		<p id="money-rain">
+			È possibile fare solo dei calcoli approssimativi.</br>
+			Due sono le stime più citate dal mondo scientifico e
+			dai media internazionali:
+			<ul>
+			<li>
+			quella di <strong>Gabriel Zucman</strong>, economista francese e professore alla Berkeley University;
+			</li>
+			<li>
+			quella di <strong>James Henry</strong>, consulente di Tax Justice Network ed ex direttore della ricerca
+			economica della società internazionale di consulenza McKinsey & Co.
+			</li>
+			</ul>
+		</p>
+		<p id="clean-divide" style="opacity:0">.</p>
+		<p id="divide" style="margin-top:50px">
+			<ul>
+			<li>
+			Stima di <strong>Zucman</strong>: pari alla somma dei Pil di Germania, Italia, Francia e Messico.
+			</li>
+			<li>
+			Stima di <strong>Henry</strong>: almeno quanto la somma dei Pil di Germania, Italia, Francia, Regno Unito, Spagna, Russia, Giappone, India, Brasile, Canada e Australia.
+			</li>
+			</ul>
+		</p>
+		</div>
+		</div>
+
+	<!-- Article -->
+	<!-- Cap 4 -->
+		<div id="after-d3">
+		<section>
+				<div class="bg-gra" style="margin-top: 0rem">
+					<div class="container-fluid art">
+					<div class="row">
+								<div class="col-md-6 col-md-offset-3">
+									<h2>Perché due stime così diverse?</h2>
+									<p>  Non essendoci dati reali sui capitali investiti attraverso i paradisi fiscali, i due economisti hanno fatto deduzioni su differenti dati finanziari globali disponibili attraverso due diversi metodi:
+									</p>
+								</div>
+
+						</div>
+
+
+						<div class="row space-3rem-bottom ">
+								<div class="col-md-4 col-md-offset-1" style="margin-top: 2.5rem">
+
+									 <img src="img/zucman.png" class="face-icon" ></img>
+
+
+									 <!--accordion Zucman-->
+									 <div id="acc"  class="ripple" data-toggle="collapse" href="#Zuc" aria-expanded="false" aria-controls="Zuc">
+															<a>
+																<div id="acc-head">
+																	<span class="more-less plus"></span>
+																	<p>Il metodo Zucman</p>
+																</div>
+															</a>
+									</div>
+									<div class="collapse" id="Zuc">
+										<div class="card cardt-block">
+											 <div  align="center" class="embed-responsive embed-responsive-16by9">
+										 <video controls>
+											 <source src="http://creativemedia3.rai.it/podcastcdn/raitre/report/7814088.mp4" type="video/mp4">
+										 </video>
+									 		</div>
+
+														<p class="smallerESE">
+															Zucman si è concentrato soprattutto sulle anomalie delle bilance che registrano le attività e le passività finanziarie: a livello mondiale risultano molti più soldi in uscita rispetto a quelli in entrata. Vale a dire che i soldi escono ma non si sa poi dove vanno.
+														</br></br>
+														</p>
+														<p class="smallerESE">
+															Questa anomalia statistica secondo Zucman si giustifica con l’esistenza dei paradisi fiscali, usati per creare uno o più strati di opacità sul transito dei soldi, che poi vengono investiti nei mercati finanziari.
+														</br></br>
+														</p>
+														<p class="smallerESE">
+															I risultati prodotti da Zucman sono considerati i più rigorosi tra quelli elaborati dalla comunità scientifica mondiale. Ciò sebbene lo stesso economista francese ammetta che i suoi dati rappresentano una notevole sottostima dei reali flussi finanziari offshore.</br></br>
+														</p>
+
+
+
+										</div>
+										<!--accordion Zucman-->
+									</div>
+								</div>
+
+
+
+
+								<div class="col-md-4 col-md-offset-2" style="margin-top: 2.5rem">
+
+								<img src="img/henry.png" class="face-icon" ></img>
+
+
+								<!--accordion Henry-->
+								 <div id="acc"  class="ripple" data-toggle="collapse" href="#Hen" aria-expanded="false" aria-controls="Hen">
+															<a>
+																<div id="acc-head">
+																	<span class="more-less plus"></span>
+																	<p>Il metodo Henry</p>
+																</div>
+															</a>
+								</div>
+								<div class="collapse" id="Hen">
+										<div class="card cardt-block">
+
+
+
+
+								<div  align="center" class="embed-responsive embed-responsive-16by9">
+									<video controls>
+										<source src="http://creativemedia3.rai.it/podcastcdn/raitre/report/7814156.mp4" type="video/mp4">
+									</video>
+								</div>
+								<p class="smallerESE">Henry è arrivato a questi risultati analizzando: </br>1) le bilance di pagamento di 139 Stati in via di sviluppo. È emerso che a partire dagli Anni 70 le élite finanziarie di questi Paesi hanno nascosto offshore più di 12 trilioni di dollari, mentre il resto della popolazione pagava il debito estero;</br></br>
+
+					2) i bilanci delle prime 50 banche private, che gestirebbero almeno un terzo di questi trilioni nascosti;</br></br>
+
+					3) i depositi bancari transfrontalieri (vale a dire i soldi depositati nelle banche di un paese diverso da quello della propria cittadinanza);</br></br>
+
+					4) la stima di quanti dovrebbero essere i soldi cash nascosti offshore (circa l’80% dei tagli grossi come i 500 euro e i 100 dollari).</br></br>
+
+					I dati di Henry sono i più citati dai media internazionali.
+					</p>
+				</div>
+			</div>
+
+
+				</div>
+				</div>
+				    <!--div che chiudono il container beige con i video-->
+					</div>
+				</div>
+
+
+
+
+
+
+<div class="container art">
+
+				<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<h2 style="margin-top:3rem;">
+								Di quali soldi stiamo parlando?
+							</h2>
+							<p>
+								Nelle stime fatte da James Henry e Gabriel Zucman viene conteggiata esclusivamente la “ricchezza finanziaria”, vale a dire i soldi portati all'estero da privati e messi in depositi bancari oppure investiti in titoli finanziari (come azioni e obbligazioni) e in fondi di investimento. Soldi mai dichiarati al Fisco. </br>
+								Nella stima generale sono esclusi tutti i profitti delle multinazionali dirottati offshore e tutti i beni mobili e immobili, come gioielli, yacht, opere d'arte e case di lusso.
+								</br></br>
+							</p>
+							<h2>
+								Di chi sono questi soldi?
+							</h2>
+							<p>
+								Henry sostiene che l’85-90% della ricchezza finanziaria nascosta offshore sia nelle mani di meno di 10 milioni di persone (cioè lo 0,14% della popolazione mondiale).
+
+								Secondo Zucman la quantità di denaro nascosto offshore è in aumento, nonostante il numero assoluto delle persone che nasconde i soldi sia in calo. In altre parole: i paradisi fiscali sono meno affollati, ma quelli che li frequentano sono sempre più ricchi.
+								</br></br>
+							</p>
+
+							<p>
+								I banchieri non hanno problemi ad adattarsi a questa tendenza, riorientando le loro attività su questi clienti chiave: «Il sistema bancario offshore - scrive Zucman - diventa più sofisticato. Gli ultraricchi usano sempre più spesso società di comodo, trust, holding e fondazioni che fungono da proprietari legali dei loro attivi».</br></br>
+
+							La ricchezza offshore non ha risentito della crisi. Secondo Zucman ha registrato a livello mondiale un aumento di circa il 25% tra la fine del 2008 e l'inizio del 2014, con un incremento riscontrato soprattutto nei centri emergenti asiatici, come Hong Kong e Singapore. Il dato sorprendente è che gli afflussi non provengono dal ricco Occidente ma soprattutto dai Paesi in via di sviluppo.
+
+							</p>
+
+
+
+
+						</div>
+				</div>
+</div>
+
+				<div class="bg-soldi">
+					<div class="container-fluid art">
+						<div class="row">
+								<div class="col-md-8 col-md-offset-2">
+									<h2 style="margin-top: 1rem; color: #e5e5da;">
+								Da dove vengono questi soldi?
+								</h2>
+								</div>
+								<img src="img/evasionem.svg" class="desktop"></img>
+								<img src="img/evasionem_mobile.svg" class="mobile-medium"></img>
+								<img src="img/evasionem_xs.svg" class="mobile"></img>
+						</div>
+					</div>
+				</div>
+
+<div class="container art">
+
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+				 <table class="table" style="margin-top: 1.5rem">
+                 <tbody>
+                 <tr>
+                 	<th style="width: 30%">Aree</th>
+                 	<th>Ricchezza offshore </br><span class="smallerESE">(miliardi di dollari)*</span></th>
+                 	<th>Quota ricchezza finanziaria offshore</br><span class="smallerESE"> (%)</span></th>
+                 	<th>Perdita gettito fiscale </br><span class="smallerESE">(miliardi di dollari all'anno)</span>**</th>
+                 </tr>
+                <tr >
+                <td><strong>Europa</strong></td>
+                <td>2.500</td>
+                <td>11</td>
+                <td>60</td>
+                </tr>
+
+                <tr>
+                <td><strong>Stati Uniti</strong></td>
+                <td>1.400</td>
+                <td>4</td>
+                <td>32</td>
+                </tr>
+
+                <tr>
+                <td><strong>Asia</strong></td>
+                <td>1.300</td>
+                <td>4</td>
+                <td>28</td>
+                </tr>
+
+                <tr>
+                <td><strong>America Latina</strong></td>
+                <td>1.000</td>
+                <td>27</td>
+                <td>21</td>
+                </tr>
+
+                <tr>
+                <td><strong>Africa</strong></td>
+                <td>900</td>
+                <td>44</td>
+                <td>19</td>
+                </tr>
+
+
+
+
+
+                <tr>
+                <td><strong>Paesi del Golfo</strong></td>
+                <td>700</td>
+                <td>58</td>
+                <td>0</td>
+                </tr>
+
+
+                <tr>
+                <td><strong>Russia</strong></td>
+                <td>600</td>
+                <td>54</td>
+                <td>4</td>
+                </tr>
+
+
+
+
+                <tr>
+                <td><strong>Canada</strong></td>
+                <td>300</td>
+                <td>9</td>
+                <td>6</td>
+                </tr>
+
+                </tbody>
+              </table>
+              <p class="fonte" >*Calcolo al 2016 che include un solo tipo di frode: quella sul patrimonio e sul reddito da esso generato. La parte del denaro che proviene da lavoro nero, traffico di droga, tangenti e false fatturazioni non è conteggiato in questa stima. </br>
+              **Miliardi di dollari persi ogni anno dalle tasse sul capitale nascosto offshore (cioè le perdite annuali dagli interessi, dai dividendi, dai capital gains, dalle eredità...ecc.).</br>
+
+                Fonte: gabriel- zucman.eu
+              </p>
+              <p>L’economia europea è quella che paga il prezzo più alto in termini assoluti, ma in termini relativi sono i Paesi in via di sviluppo a essere i più penalizzati. La loro quota di patrimonio detenuta all’estero va dal 27% dell'America Latina, al 54% della Russia e al 58% dei Paesi del Golfo. </p>
+
+
+<div class="paradise-menu-container-end">
+
+							<div class="paradise-menu-list-container-end">
+							<a href="3.html">
+
+									 <h3 class="h3-menu">Prossimo episodio
+									 </h3>
+									 <div class="description">
+
+											 <h4 class="h4-menu">Ep.3 LA CENTRIFUGA DEGLI INVESTIMENTI
+											 </h4>
+											 <h5 class="h5-menu">Come gira la ricchezza delle società
+											 </h5>
+										 </a>
+									 </div>
+							 </div>
+
+
+
+
+
+        </div>
+
+
+	</div>
+</div>
+</div>
+<div class="row">
+                      <div class="col-md-12">
+                        <div class="paradise-menu-container end-other-chapter-container">
+                          <div class="paradise-menu-list-container">
+                              <a href="index.html">
+                              <h3 class="h3-menu">Episodio 1
+                              </h3>
+                              <div class="description">
+                                  <h4 class="h4-menu">CHI È RIMASTO IN PARADISO
+                                  </h4>
+                                  <h5 class="h5-menu">Quali sono oggi i paradisi fiscali?
+                                  </h5>
+                              </div>
+                              </a>
+                          </div>
+                          <div class="paradise-menu-list-container breadhere">
+                          <a href="2.html">
+
+                              <h3 class="h3-menu">Episodio 2
+                              </h3>
+
+                              <div class="description">
+                                  <h4 class="h4-menu">QUANTI SOLDI SONO NASCOSTI
+                                  </h4>
+                                  <h5 class="h5-menu">Il buco nero della ricchezza
+                                  </h5>
+                              </div>
+                              </a>
+                          </div>
+                          <div class="paradise-menu-list-container">
+                              <a href="3.html">
+                              <h3 class="h3-menu">Episodio 3
+                              </h3>
+
+                              <div class="description">
+                                  <h4 class="h4-menu">LA CENTRIFUGA DEGLI INVESTIMENTI
+                                  </h4>
+                                  <h5 class="h5-menu">Come gira la ricchezza delle società
+                                  </h5>
+                              </div>
+                              </a>
+                          </div>
+                          <div class="paradise-menu-list-container">
+                                <a href="4.html">
+                                <h3 class="h3-menu">Episodio 4
+                              </h3>
+
+                              <div class="description">
+                                  <h4 class="h4-menu">FISCO INFERNO
+                                  </h4>
+                                  <h5 class="h5-menu">Chi ci perde e chi ci guadagna
+                                  </h5>
+                              </div>
+                              </a>
+                          </div>
+
+                         </div>
+                      </div>
+                    </div>
+
+
+
+		</section>
+
+		<section class="at">
+					<div class="social">
+							<div class="ssk-group">
+								<a href="" class="ssk ssk-facebook ssk-lg"></a>
+								<a href="" class="ssk ssk-twitter ssk-lg"></a>
+								<a href="" class="ssk ssk-google-plus ssk-lg"></a>
+							</div>
+					</div>
+	</section>
+
+
+		<!-- Footer -->
+		<footer>
+			<div class="row footer" >
+				<div class="col-sm-12">
+					<div id="colophon">
+					<div class="col-md-3">
+						<img id="lo" src="img/rai-logo.png" />
+
+					</div>
+					<div class="col-md-8 col-md-offset-1">
+					<img id="team" src="img/dt.svg" />
+					<p id="signs">
+						Milena Gabanelli, Diego Antonelli, Marianna Capozi, Giulia Dezi, Tullia Fabiani, Francesco Laurenti, Flaviano Masella, Valeria Pannuti, Marina Tosto, Luca Ucciero </br>© 2017
+					</p>
+					</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		</div>
+
+
+	<!-- ============================================================================ -->
+
+	<!-- jquery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Slick -->
+	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+	<!-- unorphanize -->
+	<!-- main script -->
+	<script src="js/script.js"></script>
+	<!-- d3 blachole -->
+	<script src="js/blackhole.js"></script>
+	<!-- accordion specific script -->
+	<script>
+	$(document).ready(function(){
+	//accordion change icon when clicked
+		function toggleIcon(e) {
+					$(e.target)
+							.prev('#acc')
+							.find(".more-less")
+							.toggleClass('plus minus');
+			}
+			$('#Zuc').on('hidden.bs.collapse', toggleIcon);
+			$('#Zuc').on('shown.bs.collapse', toggleIcon);
+
+			$('#Hen').on('hidden.bs.collapse', toggleIcon);
+			$('#Hen').on('shown.bs.collapse', toggleIcon);
+});
+	</script>
+
+
+	<script>
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-93189917-2', 'auto');
+	ga('send', 'pageview');
+
+	</script>
+
+	<script type="text/javascript">
+		SocialShareKit.init();
+	</script>
+
+	</body>
+</html>

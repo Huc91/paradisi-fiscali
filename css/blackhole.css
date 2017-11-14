@@ -1,0 +1,218 @@
+#graf-blackhole-container{
+  position:relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #373737;
+  overflow: hidden;
+}
+
+#graf-blackhole{
+  background-color: #313131;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+#text-roll {
+    position: relative;
+    top: 0;
+    /* right: 0; */
+    width: 50%;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    background-color: #373737;
+    z-index: 1;
+    overflow: hidden;
+    margin-top: -50vh;
+}
+
+#text-roll p {
+  max-width: 66%;
+  margin-top: 50vh;
+  padding-left: 25px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+#text-roll ul {
+  list-style-type: square;
+}
+#text-roll ul li {
+  max-width: 66%;
+  padding-left: 25px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+#text-roll ul li + li {
+  margin-top: 1.75rem;
+}
+
+#text-roll p:first-of-type {
+  margin-top: 25vh;
+}
+
+#text-roll > p:last-of-type{
+  margin-bottom: 10rem !important;
+}
+
+.slide {
+  height: 50vh;
+}
+
+div#down-arrow-container {
+	display: block;
+	position: fixed;
+	width: 50%;
+	bottom: 0;
+	left: 0;
+	z-index: 98;
+}
+
+span#down-arrow {
+	display: inline-block;
+	font-size: 1.5rem;
+  margin-left: 25px;
+  margin-bottom: 25px;
+	color: #fafafa;
+	animation-duration: 3s;
+	animation-name: ninja;
+	animation-iteration-count: infinite;
+}
+
+@keyframes ninja {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+#blackhole-outer {
+    fill: #191919
+}
+
+#blackhole-inner {
+}
+
+
+
+.star#white {
+    fill: #ffffff
+}
+
+.star#hot {
+    fill: #e8f9ff
+}
+
+.star#purple {
+    fill: #e9d1ff
+}
+
+.star#red {
+    fill: #ff9f9f
+}
+
+.star#blue {
+    fill: #aac4ff
+}
+
+.star#faraway {
+    fill: #9d5dff
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#after-d3 {
+  position: relative;
+  margin-top:0rem;
+  z-index: 99;
+  background-color: white;
+}
+
+#graf-roll-container {
+  background-color: #29a47d;
+}
+
+@media (max-width: 900px) {
+
+  body{
+    background-color: #373737;
+  }
+
+  #graf-roll-container {
+    background-color: #373737;
+  }
+
+  #graf-blackhole{
+    background-color: #313131;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    z-index: 98 !important;
+  }
+
+  #graf-blackhole-container {
+    z-index: 98 !important;
+    padding-top: 50px;
+    background-color: rgba(0,0,0,0)
+  }
+
+  #text-roll {
+    width: 100%;
+    position: relative;
+    margin-top: -25vh;
+    z-index: 97 !important;
+    overflow: visible;
+  }
+
+  #text-roll p {
+    max-width: 100%;
+    margin-top: 25vh;
+    padding-top: 25vh;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #text-roll ul li {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  div#down-arrow-container {
+    display: block;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    bottom: 0px;
+    left: 0;
+    z-index: 98;
+  }
+
+  span#down-arrow {
+    display: inline;
+    margin-left: auto;
+  }
+
+}
